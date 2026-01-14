@@ -1,0 +1,12 @@
+langchain-core
+langchain-community
+langgraph
+langchain-groq
+python-dotenv
+huggingface-hub
+transformers
+google-api-python-client
+google-auth<2.0
+google-auth-oauthlib
+google-auth-httplib2
+faiss-cpu
