@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 **Gmail GPT** is a **fully interactive, AI-powered assistant** built with [Streamlit](https://streamlit.io/) that connects directly to your Gmail account and turns your inbox into a conversation. Instead of scrolling, searching, and manually drafting emails, you simply **ask questions, give commands, and let the agent handle the rest** — backed by a Retrieval-Augmented Generation (RAG) pipeline and an agentic email-sending layer.
 
@@ -21,7 +21,7 @@ Built by **Shahzaman**, CEO & Founder of **Phymaco**.
 
 ---
 
-## ✨ Features
+##  Features
 
 | Feature | Description |
 |---------|-------------|
@@ -36,7 +36,7 @@ Built by **Shahzaman**, CEO & Founder of **Phymaco**.
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 The application is built on a **clean separation of concerns** between the RAG/chat pipeline and the agentic email-sending layer:
 
@@ -85,7 +85,7 @@ All modules are designed to be **frontend-agnostic** — they can be reused outs
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -192,7 +192,7 @@ Download a `credential.json` file from the **Google Cloud Console** (after enabl
 
 ---
 
-## 🧪 Example Use Cases
+##  Example Use Cases
 
 - **Personal inbox management** — quickly find and summarize important emails without endless scrolling.
 - **Customer support follow-ups** — ask the assistant to draft and send replies in your preferred tone.
