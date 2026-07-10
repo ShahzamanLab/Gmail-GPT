@@ -11,10 +11,13 @@ LIST_OF_FILES = [
     "src/Gmail_data_retriver.py",
     "src/Gmail_voice_rag_prompt.txt",
     "src/Gmail_text_rag.py",
+    "src/Gmail_prompt_loader.py",
+    "src/Gmail_Agentic_capibility/email_sender.py",
+    "src/Gmail_Agentic_capibility/bulk_email_sender.py",
+    "Test/classes_test.py",
     "requirements.txt",
     "token.json",
     "APP.py",
-    "src/Gmail_prompt_loader.py",
     ".env"
 ]
 

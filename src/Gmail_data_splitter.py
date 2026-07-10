@@ -1,44 +1,26 @@
-from pydoc import text
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from src.Gmail_data_loader import GmailLoader, GmailService
-import os
-from typing import List,Optional
-Gmail_service = GmailService()
-Gmail_loader = GmailLoader(Gmail_service)
-Gmail_loader.load_emails()
-
+from typing import Optional
 
 class DocumentSplitter:
     def __init__(
         self,
         chunk_size: int = 1000,
-        chunk_overlap: int = 300,
+        chunk_overlap: int = 200,
         separators: Optional[list] = None
     ):
-        self.chunk_size = chunk_size
-        self.chunk_overlap = chunk_overlap
-        self.separators = separators or ["\n\n", "\n", " ", ""]
-        
         self.splitter = RecursiveCharacterTextSplitter(
-            chunk_size=self.chunk_size,
-            chunk_overlap=self.chunk_overlap,
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap,
             length_function=len,
-            separators=self.separators
+            separators=separators or ["\n\n", "\n", " ", ""]
         )
     
     def split(self, documents):
         splitted_docs = self.splitter.split_documents(documents)
-        print(f"Split into {len(splitted_docs)} chunks.")
+        # Ensure category metadata is strictly preserved in every chunk
+        for doc in splitted_docs:
+            if 'category' not in doc.metadata:
+                doc.metadata['category'] = 'Personal'
+                
+        print(f"✅ Split into {len(splitted_docs)} chunks (metadata preserved).")
         return splitted_docs
-
-
-        
-
-
-
-    
-
-
-
-        
-        
